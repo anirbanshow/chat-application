@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+
+body {
+    background-image: url("./background.webp");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.281);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.passwordContainer {
+    position: relative;
+}
+
+.passwordContainer .showHide {
+    position: absolute;
+    top: 37px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.passwordContainer .showHide b {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+nav img {
+    border-radius: 50%;
+}
+
+nav .dropdown-menu[data-bs-popper] {
+    left: -95px;
+}
+
+/* Side Drawer Section */
+.sidebar {
+    position: absolute;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    z-index: 100;
+    top: 0;
+    left: -100%;
+    transition: all 0.3s ease;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar svg {
+    cursor: pointer;
+}
+
+.seachInput {
+    margin-right: 8px;
+    padding: 0px 5px 0 5px;
+    outline: none;
+    border: 1px solid #1c1c1c;
+    border-radius: 5px;
+}
+
+.searchButton {
+    background-color: gray;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.userListing {
+    background: green;
+    padding-top: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100% - 40px - 40px);
+}
+
+.eachUser {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    background: #ffeeee;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+.eachUser img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.eachUser .info h6 {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.eachUser .info p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+/* Modal Section */
+.modal .modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.modal img {
+    width: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.chat {
+    background-color: #E8E8E8;
+    color: #1c1c1c;
+    cursor: pointer;
+}
+
+.chatActive {
+    background-color: #38B2AC;
+    color: white;
+    cursor: pointer;
+}
+
+.message_area {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: lightgrey;
+}
+
+.message {
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    max-width: 250px;
+    position: relative;
+}
+
+.message>h4 {
+    font-size: 17px;
+}
+
+.message>p {
+    margin-bottom: 0;
+}
+
+.outgoing {
+    background: #e9eafd;
+    color: #787986;
+    margin-left: auto;
+}
+
+.incoming {
+    background: #8f8beb;
+    color: #fff;
+}
+
+.incoming img {
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+textarea {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    outline: none;
+    background: gray;
+}
+
+textarea::placeholder {
+    color: #fff;
+}
+
+/* Group Chat Modal Style */
+#GroupChatModal.modal .modal-body {
+    gap: 10px;
+}
+
+.useradd {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.useradd span {
+    color: black;
+    background: #ff516f;
+    border-radius: 5px;
+    padding: 3px 10px;
+    margin-right: 5px;
+}
+
+.useradd span b {
+    cursor: pointer;
+}
+
+.GroupChatModal .fetchUsers {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 170px;
+    overflow-y: auto;
+}
+
+.GroupChatModal .fetchUsers .singleUser {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    background: #d2c8c8;
+    padding-left: 10px;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.GroupChatModal .singleUser img {
+    width: 25px;
+    height: 25px;
+    margin: 0 10px 0 0;
+    border-radius: 50%;
+}
+
+.GroupChatModal .singleUser h6,
+.GroupChatModal .singleUser p {
+    color: #1c1c1c;
+    margin-bottom: 0;
+}
+
+.msgDiv {
+    width: 80%;
+    overflow: auto;
+}
